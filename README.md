@@ -82,25 +82,18 @@ def backtest(model, X, y, init=1000, test=365, selector=None):
 
 To enhance the accuracy of the model, the following features have been added:
 
-* SMA (Simple Moving Average): The moving average of close prices, which provides a smoothed representation of the stock's price trend over a specified time period.
-
-* STD (Moving Standard Deviation): The moving standard deviation of close prices, which measures the volatility of the stock's price over a specific time period.
-
-* Ratios of Various Features: Calculation of ratios such as High/Close, Low/Close, SMA_365/SMA_90, and others, which provide additional insights into the relationships between different aspects of the stock's performance.
-
-* Last Dividend Payment Amount: The amount of the most recent dividend payment made by the company. Changes in dividend policy or payment amounts can influence market sentiment and stock prices.
-
-* Days Since Last Dividend Payment: The number of days elapsed since the last dividend payment, which can capture the impact of dividend announcements on stock returns.
-
-* Days Since Last Stock Split: The number of days since the last stock split occurred, which considers the effects of corporate actions on the stock's performance.
-
-* Bollinger Bands: The Bollinger Bands indicator consists of a moving average and upper and lower bands that represent price volatility. It helps identify potential price breakouts or reversals.
-
-* RSI (Relative Strength Index): A momentum oscillator that measures the speed and change of price movements. It indicates whether a stock is overbought or oversold, potentially signalling upcoming price reversals.
-
-* MACD (Moving Average Convergence Divergence): A trend-following momentum indicator that calculates the relationship between two moving averages of a stock's price. It helps identify potential buy or sell signals.
-
-* Trend: The sum of the target value over the last seven days. For example, if the stock price went up on five out of the last seven days, the trend value would be five.
+| Feature                                      | Details                                                                                                               |
+|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| SMA (Simple Moving Average)                  | Moving average of close prices.                                                                                       |
+| STD (Moving Standard Deviation)              | Moving standard deviation of close prices.                                                                            |
+| Last Dividend Payment Amount                 | Amount of the most recent dividend payment.                                                                           |
+| Days Since Last Dividend Payment             | Number of days passed since the last dividend payment.                                                                |
+| Days Since Last Stock Split                  | The number of days since the last stock split occurred.                                                               |
+| Bollinger Bands                              | Upper and lower bands that represent price volatility.                                                                |
+| RSI (Relative Strength Index)                | A momentum oscillator that measures the speed and change of price movements.                                          |
+| MACD (Moving Average Convergence Divergence) | A trend-following momentum indicator that calculates the relationship between two moving averages of a stock's price. |
+| Trend                                        | The sum of the target value over the last seven days.                                                                 |
+| Ratios of Various Features                   | Ratios of features such as High/Close, Low/Close, SMA_365/SMA_90, and others.                                         |
 
 ### Feature selection
 
