@@ -2,7 +2,6 @@
 > Stock return prediction using machine learning methods.
 
 ## Data Source
-
 Historical stock data for Apple Inc. from Yahoo Finance up until the 30th of May, 2023.
 
 ```python
@@ -18,7 +17,6 @@ df['Target'] = np.where(df['Close'].shift(-1) > df['Close'], 1, 0)
 
 
 ## Stock History EDA Analysis
-
 ### Price
 ![Price/Volume plot](./images/EDA_0.png)
 Based on the Open/Close plot and High/Low plot, the price of Apple's stock has been steadily increasing with some fluctuations. Also, the Volume chart shows a substantial increase in trading volume during the years 1998 and 2007. This can be attributed to significant events like the introduction of the iMac and the iPhone, as well as the overall growth of the technology sector during those periods.
@@ -37,9 +35,7 @@ Although the price difference increases as the stock price increases, the relati
 ![Daily price diff. plot](./images/EDA_4.png)
 
 ## Training process
-
 ### Model
-
 The GradientBoostingClassifier is chosen for its strength in capturing non-linear relationships, assessing feature importance, and robustness to outliers and missing data.
 
 ```python
@@ -79,7 +75,6 @@ def backtest(model, X, y, init=1000, test=365, selector=None):
 ```
 
 ### Added features
-
 To enhance the accuracy of the model, the following features have been added:
 
 | Feature                                      | Details                                                                                                               |
@@ -96,7 +91,6 @@ To enhance the accuracy of the model, the following features have been added:
 | Ratios of Various Features                   | Ratios of features such as High/Close, Low/Close, SMA_365/SMA_90, and others.                                         |
 
 ### Feature selection
-
 To further improve the model, scikit-learn's SequentialFeatureSelector is used to select the most relevant features.
 
 ```python
@@ -107,7 +101,14 @@ results = backtest(clf, X, y, selector=selector)
 
 
 ## Results
+### Score progression
+|               | precision | recall   | f1-score |
+|---------------|-----------|----------|----------|
+| Original      | 0.51      | 0.33     | 0.40     |
+| Augmented     | 0.51      | 0.33     | 0.40     |
+| **Aug. + FS** | **0.51**  | **0.43** | **0.47** |
 
+### Cumulative returns
 
 ## How to run
 Run the notebooks in the following sequence:
