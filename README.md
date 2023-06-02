@@ -109,8 +109,11 @@ results = backtest(clf, X, y, selector=selector)
 | **Aug. + FS** | **0.51**  | **0.43** | **0.47** |
 
 ### Cumulative returns
+![Cumulative returns plot](./images/results_0.png)
+
+The final results still leave much room for improvement, but they have clearly improved compared to the initial results.
 
 ## How to run
-Run the notebooks in the following sequence:
+Run the notebooks in the following order:
 
     data_preparation.ipynb -> EDA_analysis.ipynb -> model.ipynb
