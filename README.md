@@ -16,7 +16,7 @@ df['Target'] = np.where(df['Close'].shift(-1) > df['Close'], 1, 0)
 ```
 
 
-## Stock History EDA Analysis
+## Stock History EDA
 ### Price
 ![Price/Volume plot](./images/EDA_0.png)
 Based on the Open/Close plot and High/Low plot, the price of Apple's stock has been steadily increasing with some fluctuations. Also, the Volume chart shows a substantial increase in trading volume during the years 1998 and 2007. This can be attributed to significant events like the introduction of the iMac and the iPhone, as well as the overall growth of the technology sector during those periods.
