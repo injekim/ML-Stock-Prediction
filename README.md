@@ -116,4 +116,4 @@ The final results still leave much room for improvement, but they have clearly i
 ## How to run
 Run the notebooks in the following order:
 
-    data_preparation.ipynb -> EDA_analysis.ipynb -> model.ipynb
+    data_preparation.ipynb -> EDA.ipynb -> model.ipynb
